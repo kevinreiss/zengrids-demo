@@ -1,0 +1,94 @@
+/* line 6, ../sass/styles.scss */
+container {
+  font-size: 120%;
+}
+/* line 46, ../../../../.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+container:before, container:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../../../../.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+container:after {
+  clear: both;
+}
+
+/* line 11, ../sass/styles.scss */
+img {
+  width: 100%;
+}
+
+/* line 13, ../sass/styles.scss */
+.aside1 {
+  float: left;
+  width: 28.57143%;
+  margin-left: 0%;
+  margin-right: -28.57143%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 17, ../sass/styles.scss */
+.content {
+  float: left;
+  width: 57.14286%;
+  margin-left: 28.57143%;
+  margin-right: -85.71429%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 21, ../sass/styles.scss */
+.aside2 {
+  float: left;
+  width: 14.28571%;
+  margin-left: 85.71429%;
+  margin-right: -100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 25, ../sass/styles.scss */
+.footer1 {
+  clear: left;
+  float: left;
+  width: 42.85714%;
+  margin-left: 57.14286%;
+  margin-right: -100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 29, ../sass/styles.scss */
+.footer2 {
+  float: left;
+  width: 57.14286%;
+  margin-left: 0%;
+  margin-right: -57.14286%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
