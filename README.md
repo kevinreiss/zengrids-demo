@@ -19,5 +19,6 @@ A Demonstration of:
 ## To Use:
 
 1. Clone into a web-accessible directory.
-2. If you want to get the latest dependencies in bower_components run
+2. The index.html file is located in the "public" directory
+3. If you want to get the latest dependencies in bower_components run
    "bower update"
