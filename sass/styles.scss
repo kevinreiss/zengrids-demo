@@ -1,25 +1,103 @@
 @import "zen";
+@import "breakpoint";
+@import "sassy-buttons";
+@import 'compass';
 
 $zen-column-count: 7; // Set the total number of columns in the grid.
 $zen-gutter-width: 10px;
+$zen-grid-width: 95%;
+
+/* Our Breakpoints */
+$small: max-width 543px;
+$medium: 794px;
+$fence-sm: $small $medium;
+
+/* reset the box model */
+*, *:before, *:after {
+  @include box-sizing('border-box');
+}
+
+/* Got to love buttons */
+button {
+ @include sassy-button;
+}
+
+.button-link {
+  @include sassy-button;
+  @include sassy-button-structure(50px, 20px);
+}
+
+.red { @include sassy-button-gradient("matte", #e86a43); }
+
+.blue { @include sassy-button-gradient("simple", #4d8ccd); }
+
+.green { @include sassy-button-gradient("glass", #8cbe5f); }
+
 
 container {
+ div, header, nav, aside, footer { border: thin 1px solid; }
  @include zen-grid-container; // Apply this mixin to the container.
+ //@include sassy-button(gradient-style, border-radius, font-size, first-color, second-color, text-color, text-style, auto-states, ie-support);
+ //@include sassy-button-structure(-border-radius, font-size, padding);
+ //@include sassy-button-gradient(gradient-style, first-color, second-color, text-color, text-style, auto-states, ie-support);
+
  font-size: 120%;
 }
 
-img { width: 100% }
+img { max-width: 100% }
+header {
+  #logo {
+    @include zen-grid-item(4,1);
+    @include breakpoint($small) {
+      @include zen-grid-item(7,1);
+    }
+  }
+  nav {
+     @include zen-grid-item(3,5);
+
+     ul.menu li {
+       list-style-type: none;
+     }
+     @include breakpoint($small) {
+       @include zen-clear();
+       @include zen-grid-item(7,1);
+       h3 {
+         display: block;
+         text-align: center;
+       }
+     }
+    @include breakpoint($medium) {
+      h3 { display: none; }
+    }
+  }
+}
 
 .aside1 {
- @include zen-grid-item(2, 1); // Apply this mixin for each grid item in the container.
+ @include breakpoint($small) {
+   @include zen-clear(left);
+   @include zen-grid-item(4,1);
+ }
+ @include breakpoint($medium) {
+   @include zen-grid-item(1,1); // Apply this mixin for each grid item in the container.
+ }
 }
 
 .content {
- @include zen-grid-item(4, 3); // Make this grid item span 4 columns. // Position this grid item in the 3rd column.
+ @include zen-clear();
+ @include breakpoint($small) {
+   font-size:120%;
+   @include zen-grid-item(7,1);
+ }
+ @include zen-grid-item(5,2); // Make this grid item span 4 columns. // Position this grid item in the 3rd column.
 }
 
 .aside2 {
- @include zen-grid-item(1, 7);
+  @include breakpoint($small) {
+    @include zen-grid-item(3,4);
+  }
+  @include breakpoint($medium) {
+    @include zen-grid-item(1, 7);
+  }
 }
 
 .footer1 {
@@ -29,3 +107,24 @@ img { width: 100% }
 .footer2 {
  @include zen-grid-item(4, 1);
 }
+
+/* The Logo  
+
+ *not working  
+ 
+ */
+$logo-img-svg: inline-image('logo.svg','image/svg+xml');
+$logo-img-jpg: inline-image('logo.jpg', 'image/png');
+header #logo {
+  // SVG Support
+  .svg & {
+    background-image: $logo-img-svg;
+  }
+
+  // No SVG Support
+  .no-js &,
+  .no-svg & {
+    background-image: $logo-img-jpg;
+  }
+}
+

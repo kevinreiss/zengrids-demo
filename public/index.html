@@ -1,17 +1,54 @@
 <html>
   <head>
     <title>Sample Zen Grid</title>
+    <link type="text/css" rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
     <link type="text/css" rel="stylesheet" href="../stylesheets/styles.css"/>
+    <link type="text/css" rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css" />
+    <!-- [if lt IE 7]>
+      <link type="text/css" rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome-ie7.css" />
+    <![endif]-->
+    <script type="text/javascript" src="../bower_components/modernizr/modernizr.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../bower_components/respond/respond.src.js"></script>
+    <![endif]-->
+    <!-- Demo Template Taken from the Example listed at:
+    http://zengrids.com/
+    -->
   </head>
   <body>
     <div class="container">
+      <header>
+        <div id="logo">
+        <h1>A Responsive Zengrids Demo</h1>
+        <div id="slogan">Semantic Responsive Grids</div>
+        </div>
+        <!-- see http://webdesignerwall.com/tutorials/css-responsive-navigation-menu -->
+        <nav role="navigation">
+               <h3>Options:</h3>
+          <ul class="menu">
+            <li><i class="icon-home"></i>One Options</li>
+            <li><i class="icon-coffee"></i>Two Options</li>
+            <li>Three Options</li>
+            <li>Four Options</li>
+          </ul>
+        </nav>
+      </header>
       <article class="content">
-        <h1>This article is the Bomb</h1>
+        <h1>Awesome Article</h1>
         <p>Tha main content. We like semantic HTML ordering.</p>
         <p>Tha main content. We like semantic HTML ordering.</p>
 
         <h2>A section</h2>
         <p>Tha main content. We like semantic HTML ordering.</p>
+        <p>Lorem ipsum dolor sit amet, eu atqui nihil meliore mei. Sea te verear offendit sensibus, oratio expetenda et vix. Ius partiendo ullamcorper te, et usu omnesque oportere. Duo commune appetere cu, te sea simul integre minimum.
+
+Congue dicant per an. Mei ne etiam propriae volutpat. Elitr animal ea mea, ea vel mucius vocibus lobortis. Percipitur dissentiet eu eos. Ne est iusto nonumes.
+
+Eos ne omnis harum. Eu mel decore offendit prodesset, ei tation antiopam delicatissimi his. In odio assum dissentiunt vis, vel ex possim feugait. Usu ex sint mentitum iudicabit. Vim ut essent iracundia concludaturque. Zril aliquid nec ne, vel omnium maluisset in.
+
+Ei sed malorum reprimique. Id qui vide lorem molestie. An mei perfecto gloriatur, sit habemus vivendo eloquentiam ad, ei ridens officiis qualisque sit. Eu vix vocibus reformidans, assum eirmod incorrupte ei eos. His adhuc labores an, dicat posidonium scribentur te mea.
+
+Id insolens maluisset disputando vix. An nemore vocibus eam, homero doming labore usu ei. Ad vix rebum lorem accommodare, mei in liber cotidieque. Nostro assentior nam ut. At per mundi rationibus appellantur.</p>
         <p>Tha main content. We like semantic HTML ordering.</p>
       </article>
       <aside class="aside1">
@@ -22,7 +59,14 @@
         </ul>
       </aside>
       <aside class="aside2">
-        Another aside.
+        <button class="blue">
+          A button aside.
+        </button>
+        <!--
+        <a href="#" class="button-link red">
+          A Text
+        </a>
+        -->
       </aside>
       <footer class="footer1">
         <p>A footer.</p>
